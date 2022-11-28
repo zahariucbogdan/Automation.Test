@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class LoginTest {
 
     public void loginWithValidData(){
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
 
         driver.manage().window().maximize();
