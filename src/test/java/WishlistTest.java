@@ -17,10 +17,12 @@ public class WishlistTest {
         driver.findElement(By.id("email")).sendKeys("cosmin@fasttrackit.org");
         driver.findElement(By.id("pass")).sendKeys("123456");
         driver.findElement(By.id("send2")).click();
+        driver.findElement(By.cssSelector("li.level0:nth-child(5)")).click();
+        driver.findElement(By.cssSelector(".product-info > div:nth-child(4) > a:nth-child(1)")).click();
+        driver.findElement(By.cssSelector(".link-wishlist")).click();
 
 
-
-
-
+        driver.close();
     }
+
 }

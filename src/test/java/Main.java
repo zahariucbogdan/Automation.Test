@@ -4,10 +4,17 @@ import org.openqa.selenium.By;
 public class Main {
 
 
-    public static void main(String[] args) throws InterruptedException {
-       LoginTest loginTest = new LoginTest();
+  //  public static void main(String[] args) throws InterruptedException {
+  //     LoginTest loginTest = new LoginTest();
 
-       loginTest.loginWithValidData();
+  //     loginTest.loginWithValidData();
+
+  //  }
+
+    public static void main(String[] args) throws InterruptedException {
+        WishlistTest wishlistTest = new WishlistTest();
+
+        wishlistTest.addToWishlistTest();
 
     }
 
