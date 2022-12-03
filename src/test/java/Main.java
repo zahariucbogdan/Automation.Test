@@ -11,12 +11,20 @@ public class Main {
 
   //  }
 
-    public static void main(String[] args) throws InterruptedException {
-        WishlistTest wishlistTest = new WishlistTest();
+  //  public static void main(String[] args) throws InterruptedException {
+   //     WishlistTest wishlistTest = new WishlistTest();
 
-        wishlistTest.addToWishlistTest();
+    //    wishlistTest.addToWishlistTest();
 
-    }
+   // }
+
+      public static void main(String[] args) throws InterruptedException {
+          RegisterTest registerTest = new RegisterTest();
+
+          registerTest.registerWithValidData();
+
+      }
+
 
 
     public static void wait(int seconds) {
