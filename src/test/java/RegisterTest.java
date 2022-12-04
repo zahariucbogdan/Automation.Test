@@ -17,10 +17,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
             driver.findElement(By.cssSelector("#firstname")).sendKeys("Zahariuc");
             driver.findElement(By.cssSelector("#middlename")).sendKeys("Nicolae");
             driver.findElement(By.id("lastname")).sendKeys("Bogdan");
-            driver.findElement(By.id("email_address")).sendKeys("bogdan_zahariuc@yahoo.com");
+            driver.findElement(By.id("email_address")).sendKeys("bogdanz@yahoo.com");
             driver.findElement(By.id("password")).sendKeys("1234567");
             driver.findElement(By.id("confirmation")).sendKeys("1234567");
             driver.findElement(By.cssSelector("button.button:nth-child(2)")).click();
+            driver.findElement(By.id("is_subscribed")).click();
 
             WebElement welcomeTextElement = driver.findElement(By.cssSelector("body > div > div.page > div.main-container.col2-left-layout > div > div.col-main > div.my-account > div > ul > li > ul > li > span"));
 
