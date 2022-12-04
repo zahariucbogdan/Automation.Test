@@ -17,7 +17,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
             driver.findElement(By.cssSelector("#firstname")).sendKeys("Zahariuc");
             driver.findElement(By.cssSelector("#middlename")).sendKeys("Nicolae");
             driver.findElement(By.id("lastname")).sendKeys("Bogdan");
-            driver.findElement(By.id("email_address")).sendKeys("bogdanz@yahoo.com");
+            driver.findElement(By.id("email_address")).sendKeys("bz@yahoo.com");
             driver.findElement(By.id("password")).sendKeys("1234567");
             driver.findElement(By.id("confirmation")).sendKeys("1234567");
             driver.findElement(By.cssSelector("button.button:nth-child(2)")).click();
