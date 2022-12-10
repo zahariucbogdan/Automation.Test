@@ -9,7 +9,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LoginTest {
     private WebDriver driver;
-
     @Before
     public void initDriver() {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
@@ -17,7 +16,6 @@ public class LoginTest {
         driver.manage().window().maximize();
         driver.get("http://testfasttrackit.info/selenium-test/");
     }
-
     @Test
     public void loginWithValidData() {
         driver.findElement(By.cssSelector(".skip-account .label")).click();
@@ -32,7 +30,6 @@ public class LoginTest {
         WebElement myAccount = driver.findElement(By.cssSelector(".block-account span"));
         Assert.assertTrue(myAccount.isDisplayed());
     }
-
     @Test
     public void loginWithValidData1() {
         driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label")).click();
@@ -49,7 +46,6 @@ public class LoginTest {
         } else
             System.err.println("Nu s-a logat. ");
     }
-
     @After
     public void quit() {
         driver.close();

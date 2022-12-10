@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
     public class RegisterTest {
         private WebDriver driver;
-
         @Before
         public void initDriver() {
             System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
@@ -15,7 +14,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
             driver.manage().window().maximize();
             driver.get("http://testfasttrackit.info/selenium-test/");
         }
-
         @Test
         public void registerWithValidData() {
 
@@ -38,7 +36,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
                 System.err.println("Nu s-a inregistrat. ");
             driver.close();
         }
-
         @After
         public void quit() {
             driver.close();
