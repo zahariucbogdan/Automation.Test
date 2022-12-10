@@ -23,8 +23,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
             driver.findElement(By.cssSelector("#middlename")).sendKeys("Nicolae");
             driver.findElement(By.id("lastname")).sendKeys("Bogdan");
             driver.findElement(By.id("email_address")).sendKeys("bz@yahoo.com");
-            driver.findElement(By.id("password")).sendKeys("1234567");
-            driver.findElement(By.id("confirmation")).sendKeys("1234567");
+            driver.findElement(By.id("password")).sendKeys("qwerty");
+            driver.findElement(By.id("confirmation")).sendKeys("qwerty");
             driver.findElement(By.cssSelector("button.button:nth-child(2)")).click();
             driver.findElement(By.id("is_subscribed")).click();
             WebElement welcomeTextElement = driver.findElement(By.cssSelector("body > div > div.page > div.main-container.col2-left-layout > div > div.col-main > div.my-account > div > ul > li > ul > li > span"));
@@ -34,7 +34,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
                 System.out.println("S-a inregistrat cu success!");
             } else
                 System.err.println("Nu s-a inregistrat. ");
-            driver.close();
         }
         @After
         public void quit() {
