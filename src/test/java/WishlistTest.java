@@ -9,7 +9,7 @@ public class WishlistTest {
     private WebDriver driver;
     @Before
     public void initDriver(){
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
+        System.setProperty("webdriver.chrome.driver.exe", "resources/chromedriver");
         driver = new ChromeDriver();
 
         driver.manage().window().maximize();
