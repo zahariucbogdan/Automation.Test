@@ -21,8 +21,7 @@ public class WishlistTest {
         driver.findElement(By.cssSelector("#header-account > div > ul > li.last > a")).click();
         driver.findElement(By.id("send2")).click();
         }
-        @After
-        public void quit(){
-            driver.close();
-        }
+   //     @After
+  ////          driver.close();
+  //      }
     }
