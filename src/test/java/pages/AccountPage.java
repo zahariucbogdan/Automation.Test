@@ -13,6 +13,8 @@ public class AccountPage {
     }
     @FindBy(css = ".hello strong")
     private WebElement welcomeTextElement;
+    public void setWelcomeTextElement(String value){
+        welcomeTextElement.click();}
     public String getWelcomeText(){
         return welcomeTextElement.getText();
     }

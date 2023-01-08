@@ -21,14 +21,17 @@ public class LoginTest {
 
     @Before
     public void initDriver() {
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver");
+        System.setProperty("webdriver.chrome.driver.exe", "resources/chromedriver");
         driver = new ChromeDriver();
+
         driver.manage().window().maximize();
         driver.get("http://testfasttrackit.info/selenium-test/");
+
         homePage = new HomePage(driver);
         loginPage = new LoginPage(driver);
         accountPage = new AccountPage(driver);
     }
+
     @Test
     public void loginWithValidData() {
         homePage.clickAccountButton();
@@ -36,7 +39,7 @@ public class LoginTest {
         loginPage.setEmailField("zahariucbogdan@yahoo.com");
         loginPage.setPasswordField("qwerty");
         loginPage.clickLoginButton();
-        Assert.assertEquals("Hello, Bogdan Nicolae Zahariuc!", accountPage.getWelcomeText());
+        Assert.assertEquals("Hello, zahariuc Bogdan!", accountPage.getWelcomeText());
 
     }
 
@@ -45,13 +48,13 @@ public class LoginTest {
 
         homePage.clickAccountButton();
         homePage.clickLoginLink();
-        loginPage.setEmailField("cosmin@fasttrackit.org");
-        loginPage.setPasswordField("1234561");
+        loginPage.setEmailField("zahariucbogdan@yahoo.com");
+        loginPage.setPasswordField("qwerty");
         loginPage.clickLoginButton();
 
         WebElement welcomeTextElement = driver.findElement(By.cssSelector("body > div > div.page > div.main-container.col2-left-layout > div > div.col-main > div.my-account > div > div.welcome-msg > p.hello > strong"));
 
-        String expectedText = "Hello,Bogdan Nicolae Zahariuc!";
+        String expectedText = "Hello, zahariuc Bogdan!";
         String actualText = welcomeTextElement.getText();
 
         if (actualText.equals(expectedText)) {
@@ -66,13 +69,13 @@ public class LoginTest {
 
         driver.findElement(By.cssSelector("#header > div > div.skip-links > div > a > span.label")).click();
         driver.findElement(By.cssSelector("#header-account > div > ul > li.last > a")).click();
-        driver.findElement(By.id("email")).sendKeys("cosmin@fasttrackit.org");
-        driver.findElement(By.id("pass")).sendKeys("123456");
+        driver.findElement(By.id("email")).sendKeys("zahariucbogdan@yahoo.com");
+        driver.findElement(By.id("pass")).sendKeys("qwerty");
         driver.findElement(By.id("send2")).click();
 
         WebElement welcomeTextElement = driver.findElement(By.cssSelector("body > div > div.page > div.main-container.col2-left-layout > div > div.col-main > div.my-account > div > div.welcome-msg > p.hello > strong"));
 
-        String expectedText = "Hello, Cosmin Fast!";
+        String expectedText = "Hello, zahariuc Bogdan!";
         String actualText = welcomeTextElement.getText();
 
         if (actualText.equals(expectedText)) {
@@ -88,3 +91,4 @@ public class LoginTest {
         driver.close();
     }
 }
+
